@@ -1,0 +1,66 @@
+* {
+    box-sizing: border-box;
+}
+
+/* remove default spacing on the page */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f1ea; 
+}
+
+/* containers side by side */
+.quiz-panel {
+    float: left;
+    width: 35%; /* takes up 35% of screen */
+    height: 100vh; /* takes up height of the screen */
+    padding: 30px;
+    background-color: white;
+}
+
+.map-panel {
+    float: left;
+    width: 65%; /* map takes up 65% of screen*/
+    height: 100vh; 
+}
+
+/* map will fill up container */
+#map {
+    width: 100%;
+    height: 100%;
+}
+
+#start-btn {
+    margin-top: 5px;
+}
+
+/* remove bullets from list*/
+#question-list {
+    list-style-type: none; 
+    padding: 0;
+}
+
+/* style the question boxes */
+.question-item {
+    background-color: #3498db; 
+    color: white;
+    padding: 15px;
+    margin-bottom: 10px; 
+    text-align: center;
+    font-weight: bold;
+}
+
+/* classes added later using js */
+.correct {
+    background-color: #2ecc71;
+}
+
+.incorrect {
+    background-color: #e74c3c;
+}
+
+/* hides elements that shouldn't be seen yet */
+.hidden {
+    display: none;
+}

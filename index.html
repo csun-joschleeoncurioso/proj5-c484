@@ -3,11 +3,54 @@
   <head>
     <meta charset="UTF-8" />
     <title>Project 5</title>
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,700,700i,900,900i" type="text/css" media="all">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyATj2OjwQVQdY6yNJVJFcKEALMEkqkO5Q0&callback=initMap&v=weekly" async defer></script>
+    <script src="script.js"></script>
+
   </head>
   <body>
-    <h1>TITLE HERE</h1>
 
-    <!-- Link to external JavaScript -->
-    <script src="script.js"></script>
+    <div class="app-container">
+        <aside class="quiz-panel">
+        <header>
+            <h1>CSUN Map Quiz</h1>
+            <p>Double click on the map to locate the buildings!</p>
+        </header>
+
+        <!-- extra credit: timer, high score  -->
+        <div class="stats-container">
+            <b>Time: <span id="timer-display">00:00</span></b><br>
+            <b>Best Time: <span id="highscore-display">--:--</span></b>
+        </div>
+
+
+        <button id="start-btn" style="margin-bottom: 15px; padding: 10px; cursor: pointer;">Start Game</button>
+
+        <!-- locations to find -->
+        <ul id="question-list">
+            <li class="question-item">Where is the BookStore?</li>
+            <li class="question-item">Where is Bayramian Hall?</li>
+            <li class="question-item">Where is Jacaranda Hall?</li>
+            <li class="question-item">Where is Manzanita Hall?</li>
+            <li class="question-item">Where is Citrus Hall?</li>
+        </ul>
+
+        <!-- final score -->
+        <div id="game-over-screen" class="hidden">
+            <h2 id="final-score">X Correct, Y Incorrect</h2>
+            <!-- Add the play again button right here -->
+            <button id="restart-btn" style="margin-top: 20px; padding: 10px; cursor: pointer;">Play Again</button>
+        </div>
+
+        </aside>
+
+        <main class="map-panel">
+            <!-- via google maps -->
+            <div id="map"></div>
+        </main>
+    </div>
+
   </body>
 </html>
